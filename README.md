@@ -1,30 +1,32 @@
-# Personal Website
+# Personal Website — Cinematic Portfolio
 
-A fast, dark-themed personal portfolio built with **React + Vite**.
+A single-file, cinematic personal portfolio with a **persistent animated
+starfield**, built with plain HTML, CSS, and Canvas — no build step, no
+dependencies.
 
-## Sections
-- **Hero / About** — intro, tagline, and social links
-- **Projects** — portfolio cards with tech tags and links
-- **Skills & Experience** — skill groups and a timeline
-- **Contact** — email call-to-action and socials
+## Highlights
+- **Starfield canvas** fixed behind the entire page (550 twinkling stars,
+  glowing feature stars, cross sparkles, and shooting stars)
+- **Dark space aesthetic** — deep black `#06070b`, warm gold + steel-blue accents
+- **Typography:** DM Serif Display · Inter · Space Mono (Google Fonts)
+- **Sections:** About, Projects (2×2), Experience timeline, Contact
+- **Scroll reveals** via IntersectionObserver, fixed blurred nav, responsive
 
 ## Editing your content
-All text lives in [`src/data.js`](src/data.js). Update your name, bio,
-projects, skills, experience, and social links there — no need to touch the
-components.
+Everything is in [`index.html`](index.html). Update the text directly in the
+markup — name, bio, project cards, timeline entries, and contact links.
 
-## Local development
+## Run locally
+It's a static file. Either open `index.html` in a browser, or serve it:
 ```bash
-npm install
-npm run dev      # start the dev server (http://localhost:5173)
-npm run build    # production build into dist/
-npm run preview  # preview the production build
+python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
 ## Deployment (Vercel)
-This project is Vercel-ready. Vercel auto-detects Vite:
-- **Build command:** `npm run build`
-- **Output directory:** `dist`
+No build needed. On [vercel.com/new](https://vercel.com/new), import this repo
+and deploy as a **static site**:
+- **Framework Preset:** Other
+- **Build Command:** *(leave empty)*
+- **Output Directory:** `.` (root)
 
-Import the repo on [vercel.com](https://vercel.com/new) and deploy — every push
-to `main` will redeploy automatically.
+Every push to `main` redeploys automatically.
